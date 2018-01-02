@@ -1,6 +1,35 @@
-# shorturl
+## 短地址服务
 
-简单的短地址服务
----
-## 功能
+* Tengine v2.1.2 ( Openresty , nginx ) 
+* Redis v3.2.5
+* Centos 6.5
 
+## 关键配置. 
+
+* Redis
+
+```
+unixsocket /data/logs/redis_logs/redis.sock
+port 0
+```
+
+* Tengine
+
+``` 
+vhostdomain.conf :
+
+    location / {
+        rewrite_by_lua_file  shorturl/redirect.lua;
+    }
+    location /shorturl {
+        content_by_lua_file shorturl/create_shorturl.lua;
+    }
+
+```
+
+```
+nginx.conf : 
+    lua_package_path "/path_to_basedir_of_shorturl/lualibs/?.lua;;";
+    init_by_lua_file /path_to_basedir_of_shorturl/init.lua ;	
+```
+	
