@@ -45,16 +45,9 @@ red = rc.newRedisConn(redisSockFile)
 if not red then Response(2, "null") end 
 
 -- 拼接短地址
-shorturl = shortDomain .. "/".. createShorturi(getUrl)
+shorturl = shortDomain .. "/".. createShorturi(getUrl())
 
 if shorturl then 
 	Response(0, shorturl)
 end
-
-
-
-
-
-
-
 

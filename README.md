@@ -33,3 +33,9 @@ nginx.conf :
     init_by_lua_file /path_to_basedir_of_shorturl/init.lua ;	
 ```
 	
+
+## 用法示例 
+
+```
+curl  http://surl.ops.vyohui.com/shorturl -X POST -d 'longurl=http://www.baidu.com'
+```
