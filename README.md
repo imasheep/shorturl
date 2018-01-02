@@ -37,5 +37,6 @@ nginx.conf :
 ## 用法示例 
 
 ```
-curl  http://surl.ops.vyohui.com/shorturl -X POST -d 'longurl=http://www.baidu.com'
+curl  http://surl.ops.vyohui.com/shorturl -X POST -d 'url=http://www.baidu.com'
+
 ```
