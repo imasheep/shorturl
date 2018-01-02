@@ -1,6 +1,6 @@
 ## 短地址服务
 
-* Tengine v2.1.2 ( Openresty , nginx ) 
+* Tengine v2.1.2 ( Openresty , Nginx 亦可) 
 * Redis v3.2.5
 * Centos 6.5
 
