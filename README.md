@@ -19,10 +19,10 @@ port 0
 vhostdomain.conf :
 
     location / {
-        rewrite_by_lua_file  shorturl/redirect.lua;
+        rewrite_by_lua_file  /path_to_basedir_of_shorturl/redirect.lua;
     }
     location /shorturl {
-        content_by_lua_file shorturl/create_shorturl.lua;
+        content_by_lua_file /path_to_basedir_of_shorturl/create_shorturl.lua;
     }
 
 ```
