@@ -1,7 +1,7 @@
 local red = rc.newRedisConn(redisSockFile)
 
 -- 获取长url
-url , err = red:get(ngx.var.uri)
+url , err = red:get("SURL:"..ngx.var.uri)
 if url == ngx.null or not url then
 	url = defaultUrl
 end
